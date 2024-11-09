@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/svg+xml" href="favicon.svg">
+      <title>Lesson 5 Task 2</title>
+   </head>
+   <body>
+      <!-- В майбутньому чекбокси та радіо будуть кастомними -->
+      <main>
+         <div>
+            <h1>Оформлення замовлення</h1>
+            <!-- Метод у форми буде або Гет або Пост в залежності від того, на який прийом даних налаштований сервер -->
+            <form action="#">
+               <fieldset>
+                  <legend>
+                     <!-- В майбутньому before для legend -->
+                     <img src="img/order-info.svg" alt="Інформація про покупця">
+                     Інформація про покупця
+                  </legend>
+                  <ul>
+                     <li><input type="text" name="form[]" value tabindex="1" placeholder="Прізвище" autocomplete="on" required></li>
+                     <li><input type="text" name="form[]" value tabindex="2" placeholder="Ім'я" autocomplete="on" required></li>
+                     <li><input type="text" name="form[]" value tabindex="3" placeholder="По батькові" autocomplete="on"></li>
+                     <li><input type="tel" name="form[]" value tabindex="4" placeholder="Контактний телефон" autocomplete="on" required></li>
+                     <li><input type="email" name="form[]" value tabindex="5" placeholder="E-mail" autocomplete="on" required></li>
+                  </ul>
+                  <div>
+                     <input id="other-person" type="checkbox" name="form[]" value="yes">
+                     <label for="other-person" tabindex="6">Отримуватиме замовлення інша людина</label>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>
+                     <!-- В майбутньому before для legend -->
+                     <img src="img/order-delivery.svg" alt="Вибір способу доставки">
+                     Вибір способу доставки
+                  </legend>
+                  <ul>
+                     <li>
+                        <input id="delivery_pickup-store" type="radio" name="delivery-method" value="pickup-store">
+                        <label for="delivery_pickup-store" tabindex="7">
+                           <!-- В майбутньому before для label -->
+                           <img src="img/d_pickup-store.svg" alt="Самовивіз із магазину">
+                           <span>Самовивіз із магазину</span>
+                           <span>Безкоштовно</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input id="delivery_nova-poshta" type="radio" name="delivery-method" value="nova-poshta" checked>
+                        <label for="delivery_nova-poshta" tabindex="8">
+                           <!-- В майбутньому before для label -->
+                           <img src="img/d_nova-poshta.svg" alt="Доставка Нова Пошта">
+                           <span>Доставка Нова Пошта</span>
+                           <span>≈ від 200 грн</span>
+                        </label>
+                     </li>
+                     <li>
+                        <input id="delivery_courier" type="radio" name="delivery-method" value="courier">
+                        <label for="delivery_courier" tabindex="9">
+                           <!-- В майбутньому before для label -->
+                           <img src="img/d_courier.svg" alt="Доставка кур'єром">
+                           <span>Доставка кур'єром</span>
+                           <span>≈ від 500 грн</span>
+                        </label>
+                     </li>
+                  </ul>
+                  <div>
+                     <!-- В майбутньому before для батьківського блоку -->
+                     <img src="img/location.svg" alt="#">
+                     <div>
+                        <p>Графік роботи: щодня з 9:00 до 18:00</p>
+                        <p>м. Київ, пров. Ізяславський 52, пов. 2</p>
+                     </div>
+                     <a href="#" target="_blank" tabindex="10" title="Переглянути розташування на мапі">На мапі</a>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>
+                     <!-- В майбутньому before для legend -->
+                     <img src="img/order-payment.svg" alt="Вибір способу оплати">
+                     Вибір способу оплати
+                  </legend>
+                  <ul>
+                     <li>
+                        <input id="cash" type="radio" name="payment-method">
+                        <label for="cash" tabindex="11">Готівкою при отриманні (Післясплата)</label>
+                     </li>
+                     <li>
+                        <input id="card" type="radio" name="payment-method" checked>
+                        <label for="card" tabindex="12">
+                           Оплата карткою на сайті
+                           <img src="img/p_master-card.svg" alt="Оплата карткою Мастер Кард">
+                           <img src="img/p_visa-card.svg" alt="Оплата карткою Віза">
+                        </label>
+                     </li>
+                     <li>
+                        <input id="privat-pay" type="radio" name="payment-method">
+                        <label for="privat-pay" tabindex="13">
+                           Privat Pay
+                           <img src="img/p_privat-pey.svg" alt="Оплата Приват Пей">
+                        </label>
+                     </li>
+                     <li>
+                        <input id="credit-store" type="radio" name="payment-method">
+                        <label for="credit-store" tabindex="14">Кредит від Магазину</label>
+                     </li>
+                     <li>
+                        <input id="credit-privat" type="radio" name="payment-method">
+                        <label for="credit-privat" tabindex="15">
+                           Оплата частинами ПриватБанк
+                           <img src="img/p_credit-privat.svg" alt="Оплата частинами ПриватБанк">
+                        </label>
+                     </li>
+                     <li>
+                        <input id="credit-mono" type="radio" name="payment-method">
+                        <label for="credit-mono" tabindex="16">
+                           Оплата частинами МоноБанк
+                           <img src="img/p_credit-mono.svg" alt="Оплата частинами МоноБанк">
+                        </label>
+                     </li>
+                  </ul>
+               </fieldset>
+               <fieldset>
+                  <legend>
+                     <!-- В майбутньому before для legend -->
+                     <img src="img/order-comment.svg" alt="Коментар до замовлення">
+                     Коментар до замовлення
+                  </legend>
+                  <textarea name="form[]" tabindex="17" placeholder="Ваш коментар" style="width: 100%; min-height: 150px; resize: vertical;"></textarea>
+               </fieldset>
+               <div>
+                  <button type="submit" tabindex="18">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+               </div>
+            </form>
+         </div>
+      </main>
+   </body>
+</html>
